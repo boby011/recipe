@@ -4,31 +4,32 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Image from 'react-bootstrap/Image';
 import { Popular } from './Popular';
 import { Grids } from './Grids';
-import homeimage from './home.jpg';
+import homeimage from './hoom.jpg';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
-    const item = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-    };
+    // const item = {
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    //     flexDirection: 'column',
+        
+    // };
 
     return (
         <div>
-            <div style={{ position: 'relative' }}>
-                <Image src={homeimage} style={{ width: '100%', objectFit: 'cover' }} />
-                <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-                    <div style={item}>
-                        <h1 className='headingStyle'>Find recipes for every occasion</h1>
-                        <h1 className='headingStyle'>Cooking never was easier</h1>
-                        <button className='homebtn mt-3'>Search your recipes</button>
-                    </div>
-                </div>
+        <div style={{ position: 'relative' }}>
+          <Image src={homeimage} className='home-image' style={{ width: '100%', objectFit: 'cover' }} />
+          <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+            <div className='ite'>
+              <h1 className='headingStyle'>Whats Cooking?</h1>
+              <p className='home-text'>Your own Cooking Resource.</p>
+              <Link to='all'><button className='homebtn mt-3'>Find recipes!</button></Link>
             </div>
-            <Popular title="Categories" />
-            <Grids />
+          </div>
         </div>
+      </div>
+      
     );
 };
 

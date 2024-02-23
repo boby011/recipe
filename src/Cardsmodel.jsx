@@ -14,7 +14,7 @@ const Cardsmodel = (props) => {
   return (
     <div>
       <Link to={`/category/${props.categorytitle}`} className='linkdec'>
-       <Card sx={{ maxWidth: 345 }} className='cardstyle'>
+       <Card sx={{ maxWidth: 345,backgroundColor:'#ECA035' }} className='cardstyle'>
             <CardMedia
             component="img"   
             height="140"

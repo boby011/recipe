@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Nav } from './Nav';
-import  Popular  from './Popular';
-import  Grids  from './Grids';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Home } from './Home';
+import { CategoriesPage } from './CategoriesPage';
+import { Country } from './Country';
+import { CountryItem } from './CountryItem';
+import { MenuItem, MenuItems } from './MenuItems';
+import { Ingredients } from './Ingredients';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +20,11 @@ root.render(
       <Routes>
         <Route path='/' element={<Nav />}>
           <Route index element={<Home />} />
+          <Route path='/cat' element={<CategoriesPage />}/>
+          <Route path='/coun' element={<Country/>}/>
+          <Route path='/countryitem/:area' element={<CountryItem/>}/>
+          <Route path='/menuitems/:category' element={<MenuItems/>}/>
+          <Route path='/ingredients/:mealId' element={<Ingredients/>}/>
         </Route>
 
 
