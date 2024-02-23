@@ -195,6 +195,10 @@
 
 
 
+
+
+
+
 .wrapitems {
   display: flex;
   flex-wrap: wrap;
@@ -236,7 +240,7 @@
 }
 
 .menu img {
-  
+
   width: 100%;
   height: auto;
   margin-bottom: 10px;
@@ -257,3 +261,133 @@
 .menu button:hover {
   background-color: #0056b3;
 }
+
+
+
+
+/* Ingredients.css */
+
+.details {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.col-6 {
+  width: 100%; /* Full width on small screens */
+  max-width: 400px; /* Set a maximum width */
+  margin-bottom: 20px; /* Add space between columns */
+}
+
+.ingredient {
+  margin-top: 20px;
+}
+
+.ingredient h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.ingredient ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredient li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.ingredient li::before {
+  content: "•";
+  color: #EE6352; /* Bullet color */
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.instruction {
+  margin-top: 20px;
+}
+
+.instruction h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.instruction p {
+  font-size: 1rem;
+}
+
+.btnheart {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.btnheart svg {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.btnheart:hover svg {
+  color: #EE6352; /* Change color on hover */
+}
+
+@media (min-width: 768px) {
+  .col-6 {
+    width: calc(50% - 20px); /* Two columns with space between */
+    margin-right: 20px;
+  }
+
+  .col-6:last-child {
+    margin-right: 0; /* Remove right margin for the last column */
+  }
+}
+
+/* favorites.css */
+
+.favorites-container {
+  padding: 20px;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.favorite-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.favorite-item:hover {
+  transform: translateY(-5px);
+}
+
+.favorite-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.favorite-item h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* Add more styles as needed */

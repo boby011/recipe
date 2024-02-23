@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Nav } from './Nav';
+
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Home } from './Home';
 import { CategoriesPage } from './CategoriesPage';
@@ -11,11 +13,14 @@ import { Country } from './Country';
 import { CountryItem } from './CountryItem';
 import { MenuItem, MenuItems } from './MenuItems';
 import { Ingredients } from './Ingredients';
-
+import { Store } from './store';
+import Favorites from './Favourite';
+import { Allitems } from './Allitems';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={Store}>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Nav />}>
@@ -25,12 +30,15 @@ root.render(
           <Route path='/countryitem/:area' element={<CountryItem/>}/>
           <Route path='/menuitems/:category' element={<MenuItems/>}/>
           <Route path='/ingredients/:mealId' element={<Ingredients/>}/>
+          <Route path='/ai' element={<Allitems/>}/>
+          <Route path='/fav' element={<Favorites/>}/>
         </Route>
 
 
         {/* </Route> */}
       </Routes>
     </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

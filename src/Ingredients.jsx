@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './App.css'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { FaRegHeart, FaHeart } from "react-icons/fa";

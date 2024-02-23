@@ -14,8 +14,8 @@ export const Nav = () => {
           <div className='list'>
           <Link to='/'><span style={{color:'black'}}>Home</span></Link>
           <Link to='/cat'><span style={{color:'black'}}>Categories</span></Link>
-          <Link to='/about'> <span style={{color:'black'}}>All items</span></Link>
-          <Link to='/work'><span style={{color:'black'}}>Favorite</span></Link>
+          <Link to='/ai'> <span style={{color:'black'}}>All items</span></Link>
+          <Link to='/fav'><span style={{color:'black'}}>Favorite</span></Link>
           <Link to='/coun'> <span style={{color:'black'}}>Country</span></Link>
           </div>
         
