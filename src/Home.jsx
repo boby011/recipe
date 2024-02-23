@@ -24,7 +24,7 @@ export const Home = () => {
             <div className='ite'>
               <h1 className='headingStyle'>Whats Cooking?</h1>
               <p className='home-text'>Your own Cooking Resource.</p>
-              <Link to='all'><button className='homebtn mt-3'>Find recipes!</button></Link>
+              <Link to='ai'><button className='homebtn mt-3'>Find recipes!</button></Link>
             </div>
           </div>
         </div>
